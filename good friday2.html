@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Good Friday</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fbeee0, #e0c3fc);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: white;
+      padding: 50px;
+      border-radius: 30px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: fadeIn 2s ease;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      color: #6a4e42;
+      margin-bottom: 10px;
+    }
+
+    .cross {
+      font-size: 5em;
+      color: #8b5e3c;
+      margin-bottom: 20px;
+    }
+
+    .petal {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: blue;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: floatPetal 10s infinite ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatPetal {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Music (auto-plays and loops softly) -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/22/audio_e1bfa98fbf.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Card content -->
+  <div class="card">
+    <div class="cross">✝️</div>
+    <h1>Happy Good Friday</h1>
+    <p style="font-size: 1.2em; color: #5a4e4e;">Wishing you peace, love, and blessings.</p>
+  </div>
+
+  <!-- Floating petals -->
+  <script>
+    for (let i = 0; i < 20; i++) {
+      let petal = document.createElement("div");
+      petal.className = "petal";
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = (6 + Math.random() * 6) + "s";
+      petal.style.opacity = Math.random();
+      document.body.appendChild(petal);
+    }
+  </script>
+
+</body>
+</html>
