@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            background: #e8f0fe;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        a {
+            color: white;
+            background-color: #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 0;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        .example {
+            display: none;
+            background: #d1ffd1;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-family: monospace;
+        }
+    </style>
+    <script>
+        function showExample(id) {
+            let example = document.getElementById(id);
+            example.style.display = example.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Data Types</h1>
+        <p><strong><a onclick="showExample('stringExample')">String</a>:</strong> Text inside quotes</p>
+        <div id="stringExample" class="example">let color = "Yellow";<br>let lastName = "Johnson";</div>
+        
+        <p><strong><a onclick="showExample('numberExample')">Number</a>:</strong> Any number</p>
+        <div id="numberExample" class="example">let age = 25;<br>let pi = 3.14;</div>
+        
+        <p><strong><a onclick="showExample('booleanExample')">Boolean</a>:</strong> Either true or false</p>
+        <div id="booleanExample" class="example">let isCodingFun = true;
+            let isHomeworkDone = false;
+            <br><br>
+            if (isCodingFun) {
+                console.log("Keep coding! 🚀");
+            } 
+            <br><br>
+            else {
+                console.log("Take a break! 😴");
+            }
+            <br><br>
+            // Since isCodingFun is true, it will print:
+            // 👉 "Keep coding! 🚀"</div>
+        
+        <p><strong><a onclick="showExample('objectExample')">Object</a>:</strong> A collection of key-value pairs</p>
+        <div id="objectExample" class="example">let person = {name: "John", age: 30};</div>
+        
+        <p><strong><a onclick="showExample('arrayExample')">Array</a>:</strong> A list of values</p>
+        <div id="arrayExample" class="example">let colors = ["Red", "Green", "Blue"];</div>
+        
+        <p><strong><a onclick="showExample('undefinedExample')">Undefined</a>:</strong> A variable without a value</p>
+        <div id="undefinedExample" class="example">let x;</div>
+        
+        <p><strong><a onclick="showExample('nullExample')">Null</a>:</strong> A variable with no value</p>
+        <div id="nullExample" class="example">let y = null;</div>
+    </div>
+</body>
+</html>
